@@ -9,6 +9,7 @@ This is a simulation of a simple banking Desktop Application using Python for th
 
 
 #  FEATURES
+- Fraud detection using Machine Learning
 - User Registration
 - Acoount Balance Check
 - Deposit with It own window
@@ -22,6 +23,12 @@ This is a simulation of a simple banking Desktop Application using Python for th
 - Python=3.7.3
 - PyQT5=5.11.6
 - Sqlite3 (if not installed before)
+- Pandas
+- Numpy
+- matplotlib
+- pickle
+- scikit learn
+- Random Forest
 
 # Installation
 
