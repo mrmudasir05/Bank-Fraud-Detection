@@ -1,21 +1,28 @@
 
 # Bank App
-## Banking app using python, pyQt5 and sqlite for database
+## Banking app using python, pyQt5 and SQLite for database
 
 
 # INTRODUCTIONS
 
-This is a simulation of a simple banking Desktop Application using Python for the core coding, This software can be use for day to day operations of Most banks with little or no need adjustment
+This is a simulation of a simple banking Desktop Application using Python for the core coding, This software can be used for day to day operations of Most banks with little or no need for adjustment
 
+# Overview
+-Fraud Detection in Banking Transactions is a project focused on developing a system that can detect fraudulent activities within banking transactions. The system utilizes machine learning techniques to analyze transaction data, PyQt5 for a user-friendly graphical interface, and SQLite for efficient data storage and retrieval.
 
+# Technologies used
+-Python
+-Machine Learning (Scikit-Learn, PandasNumpy, matplotlib, pickle, and Random Forest )
+-PyQt5
+-SQLite
 #  FEATURES
 - Fraud detection using Machine Learning
+- Analyze transaction data to identify potential fraudulent activities.
+- Intuitive GUI using PyQt5, providing an interactive interface for users.
+- Secure data storage and retrieval using SQLite.
 - User Registration
-- Acoount Balance Check
-- Deposit with It own window
-- withdrawal with a one time Generated Code
+- Account Balance Check
 - Good Authentication
-- Edit profile
 - Delete Account
 - Logout
 
@@ -23,49 +30,31 @@ This is a simulation of a simple banking Desktop Application using Python for th
 - Python=3.7.3
 - PyQT5=5.11.6
 - Sqlite3 (if not installed before)
-- Pandas
-- Numpy
-- matplotlib
-- pickle
-- scikit learn
-- Random Forest
  
 # Project Components 
  ## BankNH.db
  - This file contains the Tables of the user data and their transactions
+## MainLogin.py
+- This .py file contains the GUI of Main login page where a user has to input his username and password to login or register as a new user.
+## MainProfile.py
+- This .py file contains the main dashboard containing different buttons for different actions.
+## banking_app_ml.ipynb
+- This notebook contains the machine learning model on which the dataset is trained to predict whether the transaction is fraud or not.
 
 # Installation
 
-Clone this repo to an enviroment/folder on your machine and install dependencies after all instatllation has been done, Rund the `Mainwelcom.py` file
+Clone this repo to an environment/folder on your machine and install dependencies after all installation has been done, Rund the `Mainwelcom.py` file
 
 > python mainwelcom.py
 
 ### Do not forget to connect to mysql using your own details
 
-# SCREENSHOTS
-___
 
-![1](page1.jpg)
-___
-
-![2](page2.jpg)
-___
-
-![3](page3.jpg)
-___
-
-![4](page4.jpg)
-___
-
-![5](page5.jpg)
-___
-
-![6](page6.jpg)
 ___
 
 # Conclusion
 
-This is a free app to be use by anyone.
+This is a free app to be used by anyone.
 ___
 
 THANKS FOR USING
