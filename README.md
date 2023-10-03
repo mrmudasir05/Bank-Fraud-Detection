@@ -29,6 +29,10 @@ This is a simulation of a simple banking Desktop Application using Python for th
 - pickle
 - scikit learn
 - Random Forest
+ 
+# Project Components 
+ ## BankNH.db
+ - This file contains the Tables of the user data and their transactions
 
 # Installation
 
