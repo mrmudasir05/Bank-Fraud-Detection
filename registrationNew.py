@@ -93,11 +93,15 @@ class Ui_registrationPage(object):
         self.label_sex.setStyleSheet("color: rgb(252, 252, 252);font: 75 10pt \"Verdana\";")
         self.label_sex.setObjectName("label_sex")
         self.formLayout.setWidget(7, QtWidgets.QFormLayout.LabelRole, self.label_sex)
-        self.lineEdit_sex = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_sex.setStyleSheet("font: 75 10pt \"Verdana\";\n"
-"background-color: rgb(240, 240, 240);")
-        self.lineEdit_sex.setObjectName("lineEdit_sex")
-        self.formLayout.setWidget(7, QtWidgets.QFormLayout.FieldRole, self.lineEdit_sex)
+
+        # Create a combo box for selecting gender
+        self.comboBox_sex = QtWidgets.QComboBox(self.centralwidget)
+        self.comboBox_sex.addItem("Male")
+        self.comboBox_sex.addItem("Female")
+        self.comboBox_sex.addItem("Other")
+        self.comboBox_sex.setStyleSheet("font: 75 10pt \"Verdana\";\n"
+                                        "background-color: rgb(240, 240, 240);")
+        self.formLayout.setWidget(7, QtWidgets.QFormLayout.FieldRole, self.comboBox_sex)
         self.label_address = QtWidgets.QLabel(self.centralwidget)
         self.label_address.setStyleSheet("color: rgb(252, 252, 252);font: 75 10pt \"Verdana\";")
         self.label_address.setObjectName("label_address")
@@ -187,7 +191,7 @@ class Ui_registrationPage(object):
                     self.general_message('Invalid Number', 'please Check your Phone number')
                     return phone
                 else:
-                    sex = self.lineEdit_sex.text()
+                    sex = self.comboBox_sex.currentText()
                     address = self.lineEdit_address.text()
                     c.execute("INSERT INTO NEWBANK(USERNAME, FIRSTNAME, LASTNAME, EMAIL, PASSWORD, CONFIRM, PHONE, SEX ,ADDRESS)VALUES (?,?,?,?,?,?,?,?,?)", (str(username), str(firstname), str(lastname), str(email), str(password), str(confirmPass), str(phone), str(sex), str(address)))
                     print('insert done')
@@ -224,7 +228,7 @@ class Ui_registrationPage(object):
         self.label_phone.setText(_translate("registrationPage", "Phone"))
         self.lineEdit_phone.setPlaceholderText(_translate("registrationPage", "phone Number"))
         self.label_sex.setText(_translate("registrationPage", "Sex"))
-        self.lineEdit_sex.setPlaceholderText(_translate("registrationPage", "Male or Female"))
+        # self.lineEdit_sex.setPlaceholderText(_translate("registrationPage", "Male or Female"))
         self.label_address.setText(_translate("registrationPage", "Address"))
         self.lineEdit_address.setPlaceholderText(_translate("registrationPage", "address"))
         self.pushButton_Register.setText(_translate("registrationPage", "REGISTER"))
@@ -234,10 +238,10 @@ class Ui_registrationPage(object):
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     registrationPage = QtWidgets.QMainWindow()
     ui = Ui_registrationPage()
     ui.setupUi(registrationPage)
     registrationPage.show()
     sys.exit(app.exec_())
-
